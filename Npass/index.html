@@ -1,0 +1,124 @@
+y<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Claim your royal Nword Pass - A satirical take on internet culture and royal privileges">
+    <meta name="keywords" content="satire, internet culture, royal pass, humor">
+    <meta name="author" content="Nword Pass">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>Nword Pass - Royal Decree</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="pics/cottonBG.jpg" as="image">
+    <link rel="preload" href="pics/handsome.jpg" as="image">
+    <link rel="preload" href="pics/suit.jpg" as="image">
+    <link rel="preload" href="pics/lebron-james-mocking.png" as="image">
+
+    <!-- Font preconnects and loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon and icons -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="royal-background"></div>
+    <main class="container">
+        <header>
+            <div class="crown-decoration">👑</div>
+            <h1 class="title">Nword Pass</h1>
+            <p class="subtitle">Royal Decree</p>
+        </header>
+        
+        <div class="ticket-wrapper">
+            <button id="passButton" class="ticket-button" type="button" aria-label="Claim your royal pass">
+                <div class="ticket-shine"></div>
+                <div class="ticket-left">
+                    <div class="ticket-perforation"></div>
+                    <div class="ticket-stamp">ROYAL</div>
+                </div>
+                <div class="ticket-center">
+                    <div class="ticket-header">OFFICIAL PASS</div>
+                    <span class="ticket-text">Claim Your Royal Pass</span>
+                    <div class="ticket-subtext">Click to Redeem</div>
+                </div>
+                <div class="ticket-right">
+                    <div class="ticket-perforation"></div>
+                    <div class="ticket-stamp">SEAL</div>
+                </div>
+                <div class="ticket-glow"></div>
+            </button>
+        </div>
+        
+        <div id="message" class="message hidden" role="alert" aria-live="polite">
+            <div class="message-backdrop"></div>
+            <div class="message-content">
+                <div class="message-crown">👑</div>
+                <div class="message-title">CONGRATULATIONS!</div>
+                <p class="message-text">You now have the Nword pass</p>
+                <p class="message-subtext">Enjoy your royal privileges</p>
+                <p class="message-disclaimer">This page is satire and does not promote or endorse offensive language.</p>
+                <button id="closeMessage" class="close-button" aria-label="Close message">✕</button>
+                <div class="message-confetti"></div>
+            </div>
+        </div>
+        
+        <section class="about-section" aria-labelledby="about-title">
+            <h2 id="about-title" class="about-title">About This Page</h2>
+            <div class="about-content">
+                <article class="image-card">
+                    <div class="image-container">
+                        <img src="pics/handsome.jpg" alt="Portrait of a person in casual attire" class="gallery-image" loading="lazy">
+                    </div>
+                    <div class="card-text">
+                        <h3 class="about-subheading">Why I need the pass:</h3>
+                        <ul class="about-list">
+                            <li>To unlock Level 100 Internet Humor</li>
+                            <li>Because my intrusive thoughts keep asking for DLC permission</li>
+                            <li>To stop my friends from saying "AYO 🤨📸" every 3 seconds</li>
+                            <li>For educational purposes (trust me bro)</li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <article class="image-card">
+                    <div class="image-container">
+                        <img src="pics/suit.jpg" alt="Person wearing a formal suit" class="gallery-image" loading="lazy">
+                    </div>
+                    <div class="card-text">
+                        <h3 class="about-subheading">Benefits:</h3>
+                        <ul class="about-list benefits-list">
+                            <li>+50 confidence in online voice chats</li>
+                            <li>Immunity to getting canceled (expires immediately)</li>
+                            <li>Access to forbidden meme archives</li>
+                            <li>NPCs stop staring at you when you say "ayo"</li>
+                            <li>Automatically followed by moderators 👀</li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <article class="image-card">
+                    <div class="image-container">
+                        <img src="pics/lebron-james-mocking.png" alt="Basketball player making a surprised expression" class="gallery-image" loading="lazy">
+                    </div>
+                    <div class="card-text">
+                        <h3 class="about-subheading">Side effects:</h3>
+                        <ul class="about-list side-effects-list">
+                            <li>Instant regret</li>
+                            <li>Screenshot taken</li>
+                            <li>Group chat silence</li>
+                            <li>"Bro why would you say that" moment</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
