@@ -20,6 +20,8 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -1161,5 +1163,143 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* ==== ADDITIONAL RESPONSIVE IMPROVEMENTS ==== */
+
+/* Extra Small Mobile (max-width 360px) */
+@media (max-width: 360px) {
+    .pass-title {
+        font-size: 1.6rem;
+        padding: 0.8rem 1rem;
+    }
+
+    .pass-description {
+        font-size: 0.85rem;
+    }
+
+    .seal-badge {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+        border: 3px solid #b8860b;
+    }
+
+    .ticket-button {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.2rem;
+        min-height: 50px;
+    }
+
+    .features-grid {
+        gap: 1rem;
+    }
+
+    .feature-title {
+        font-size: 1rem;
+    }
+
+    .feature-list li {
+        font-size: 0.75rem;
+    }
+
+    .cotton-piece {
+        width: 35px;
+        height: 35px;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Large Desktop (1400px+) */
+@media (min-width: 1400px) {
+    .container {
+        padding: 3rem 4rem;
+    }
+
+    .pass-title {
+        font-size: 5rem;
+        padding: 2rem 3rem;
+    }
+
+    .seal-badge {
+        font-size: 1.6rem;
+        padding: 1.5rem 3rem;
+    }
+
+    .ticket-button {
+        max-width: 450px;
+        font-size: 1.3rem;
+        padding: 1.8rem 3rem;
+        min-height: 90px;
+    }
+
+    .features-title {
+        font-size: 3rem;
+        padding: 2rem 3rem;
+    }
+
+    .feature-card {
+        border: 5px solid #b8860b;
+    }
+
+    .feature-title {
+        font-size: 2rem;
+    }
+
+    .feature-image {
+        height: 350px;
+    }
+
+    .feature-list li {
+        font-size: 1.05rem;
+    }
+
+    .cotton-piece {
+        width: 100px;
+        height: 100px;
+    }
+
+    .footer-text {
+        font-size: 2rem;
+    }
+}
+
+/* Tablet Landscape (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .container {
+        padding: 1.5rem 2rem;
+    }
+
+    .pass-title {
+        font-size: 2.5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .ticket-button {
+        max-width: 350px;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    .royal-button:active,
+    .ticket-button:active,
+    .ticket-close-btn:active {
+        transform: scale(0.95);
+    }
+
+    .feature-card {
+        transition: all 0.2s ease-out;
+    }
+
+    .feature-card:active {
+        transform: scale(1.02);
     }
 }

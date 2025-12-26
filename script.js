@@ -68,8 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
 function createConfetti() {
     const message = document.querySelector('.message-content');
     const colors = ['#ffd700', '#d4af37', '#ffed4e', '#8b6914', '#f4c430'];
+    
+    // Reduce confetti on mobile
+    const confettiCount = window.innerWidth < 768 ? 20 : 60;
 
-    for (let i = 0; i < 60; i++) {
+    for (let i = 0; i < confettiCount; i++) {
         const confetti = document.createElement('div');
         confetti.style.position = 'absolute';
         confetti.style.left = Math.random() * 100 + '%';
@@ -106,7 +109,10 @@ function createSparkles() {
     const button = document.getElementById('passButton');
     const rect = button.getBoundingClientRect();
     
-    for (let i = 0; i < 40; i++) {
+    // Reduce sparkles on mobile
+    const sparkleCount = window.innerWidth < 768 ? 15 : 40;
+    
+    for (let i = 0; i < sparkleCount; i++) {
         const sparkle = document.createElement('div');
         sparkle.style.position = 'fixed';
         sparkle.style.left = rect.left + rect.width / 2 + 'px';
@@ -140,7 +146,10 @@ function createSparkles() {
 function createRoyalFlares() {
     const container = document.querySelector('.container');
     
-    for (let i = 0; i < 8; i++) {
+    // Reduce flares on mobile
+    const flareCount = window.innerWidth < 768 ? 3 : 8;
+    
+    for (let i = 0; i < flareCount; i++) {
         const flare = document.createElement('div');
         flare.style.position = 'fixed';
         flare.style.left = Math.random() * window.innerWidth + 'px';
