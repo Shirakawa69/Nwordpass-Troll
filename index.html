@@ -1,4 +1,4 @@
-y<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@ y<!DOCTYPE html>
     <meta name="description" content="Claim your royal Nword Pass - A satirical take on internet culture and royal privileges">
     <meta name="keywords" content="satire, internet culture, royal pass, humor">
     <meta name="author" content="Nword Pass">
-    <meta name="theme-color" content="#1a1a2e">
+    <meta name="theme-color" content="#0a0a15">
     <title>Nword Pass - Royal Decree</title>
 
     <!-- Preload critical resources -->
@@ -24,100 +24,139 @@ y<!DOCTYPE html>
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="vip-ticket.css">
 </head>
 <body>
-    <div class="royal-background"></div>
+    <div class="floating-crowns"></div>
+    
     <main class="container">
-        <header>
-            <div class="crown-decoration">👑</div>
-            <h1 class="title">Nword Pass</h1>
-            <p class="subtitle">Royal Decree</p>
+        <header class="royal-header">
+            <div class="crown-top">👑</div>
+            <div class="ornament-line"></div>
+            <h1 class="pass-title">NWORD PASS</h1>
+            <p class="pass-description">Royal Decree of Excellence</p>
+            <div class="ornament-line"></div>
+            <div class="seal-badge">⚜️ OFFICIAL SEAL ⚜️</div>
         </header>
+
+        <button id="passButton" class="royal-button ticket-button" type="button" aria-label="Claim your royal pass">
+            CLAIM YOUR PASS
+        </button>
         
-        <div class="ticket-wrapper">
-            <button id="passButton" class="ticket-button" type="button" aria-label="Claim your royal pass">
-                <div class="ticket-shine"></div>
-                <div class="ticket-left">
-                    <div class="ticket-perforation"></div>
-                    <div class="ticket-stamp">ROYAL</div>
+        <div id="message" class="vip-ticket-card hidden" role="alert" aria-live="polite">
+            <div class="ticket-container">
+                <div class="ticket-stub">
+                    <div class="stub-content">
+                        <div class="ticket-logo">👑</div>
+                        <div class="ticket-type">VIP PASS</div>
+                        <div class="ticket-number">#ROYAL-001</div>
+                    </div>
                 </div>
-                <div class="ticket-center">
-                    <div class="ticket-header">OFFICIAL PASS</div>
-                    <span class="ticket-text">Claim Your Royal Pass</span>
-                    <div class="ticket-subtext">Click to Redeem</div>
+                <div class="ticket-main">
+                    <div class="ticket-header">
+                        <div class="ticket-crown">👑</div>
+                        <h2 class="ticket-title">ROYAL DECREE</h2>
+                        <div class="ticket-subtitle">OF EXCELLENCE</div>
+                    </div>
+
+                    <div class="ticket-body">
+                        <div class="recipient-name">THE NWORD PASS</div>
+                        <div class="recipient-title">HAS BEEN GRANTED TO YOU</div>
+
+                        <div class="fortune-section">
+                            <div class="fortune-label">Your Royal Fortune:</div>
+                            <div class="fortune-text" id="fortuneText"></div>
+                        </div>
+
+                        <div class="ticket-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Valid:</span>
+                                <span class="detail-value">Forever</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Status:</span>
+                                <span class="detail-value">ACTIVE</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Authority:</span>
+                                <span class="detail-value">Internet Royalty</span>
+                            </div>
+                        </div>
+
+                        <div class="disclaimer">
+                            This royal decree is satire and does not promote or endorse offensive language.
+                        </div>
+                    </div>
+
+                    <div class="ticket-footer">
+                        <button id="closeMessage" class="ticket-close-btn" aria-label="Close royal decree">
+                            <span class="close-text">CLOSE DECREE</span>
+                            <span class="close-icon">✖</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="ticket-right">
-                    <div class="ticket-perforation"></div>
-                    <div class="ticket-stamp">SEAL</div>
-                </div>
-                <div class="ticket-glow"></div>
-            </button>
-        </div>
-        
-        <div id="message" class="message hidden" role="alert" aria-live="polite">
-            <div class="message-backdrop"></div>
-            <div class="message-content">
-                <div class="message-crown">👑</div>
-                <div class="message-title">CONGRATULATIONS!</div>
-                <p class="message-text">You now have the Nword pass</p>
-                <p class="message-subtext">Enjoy your royal privileges</p>
-                <p class="message-disclaimer">This page is satire and does not promote or endorse offensive language.</p>
-                <button id="closeMessage" class="close-button" aria-label="Close message">✕</button>
-                <div class="message-confetti"></div>
             </div>
         </div>
         
-        <section class="about-section" aria-labelledby="about-title">
-            <h2 id="about-title" class="about-title">About This Page</h2>
-            <div class="about-content">
-                <article class="image-card">
-                    <div class="image-container">
-                        <img src="pics/handsome.jpg" alt="Portrait of a person in casual attire" class="gallery-image" loading="lazy">
-                    </div>
-                    <div class="card-text">
-                        <h3 class="about-subheading">Why I need the pass:</h3>
-                        <ul class="about-list">
-                            <li>To unlock Level 100 Internet Humor</li>
-                            <li>Because my intrusive thoughts keep asking for DLC permission</li>
-                            <li>To stop my friends from saying "AYO 🤨📸" every 3 seconds</li>
-                            <li>For educational purposes (trust me bro)</li>
+        <section class="features-section" aria-labelledby="features-title">
+            <h2 id="features-title" class="features-title">Royal Benefits & Effects</h2>
+            
+            <div class="features-grid">
+                <article class="feature-card">
+                    <h3 class="feature-title">🌟 Why You Need It</h3>
+                    <img src="pics/handsome.jpg" alt="Portrait of a person in casual attire" class="feature-image" loading="lazy">
+                    <div class="feature-content">
+                        <ul class="feature-list">
+                            <li>Unlock Level 100 Internet Humor</li>
+                            <li>Your intrusive thoughts need permission</li>
+                            <li>Stop the "AYO 🤨📸" every 3 seconds</li>
+                            <li>Educational purposes (trust me bro)</li>
                         </ul>
                     </div>
                 </article>
                 
-                <article class="image-card">
-                    <div class="image-container">
-                        <img src="pics/suit.jpg" alt="Person wearing a formal suit" class="gallery-image" loading="lazy">
-                    </div>
-                    <div class="card-text">
-                        <h3 class="about-subheading">Benefits:</h3>
-                        <ul class="about-list benefits-list">
-                            <li>+50 confidence in online voice chats</li>
-                            <li>Immunity to getting canceled (expires immediately)</li>
+                <article class="feature-card">
+                    <h3 class="feature-title">💎 Royal Benefits</h3>
+                    <img src="pics/suit.jpg" alt="Person wearing a formal suit" class="feature-image" loading="lazy">
+                    <div class="feature-content">
+                        <ul class="feature-list">
+                            <li>+50 confidence in voice chats</li>
+                            <li>Immunity to cancellation (expires immediately)</li>
                             <li>Access to forbidden meme archives</li>
-                            <li>NPCs stop staring at you when you say "ayo"</li>
-                            <li>Automatically followed by moderators 👀</li>
+                            <li>Moderators auto-follow you 👀</li>
                         </ul>
                     </div>
                 </article>
                 
-                <article class="image-card">
-                    <div class="image-container">
-                        <img src="pics/lebron-james-mocking.png" alt="Basketball player making a surprised expression" class="gallery-image" loading="lazy">
-                    </div>
-                    <div class="card-text">
-                        <h3 class="about-subheading">Side effects:</h3>
-                        <ul class="about-list side-effects-list">
-                            <li>Instant regret</li>
-                            <li>Screenshot taken</li>
-                            <li>Group chat silence</li>
-                            <li>"Bro why would you say that" moment</li>
+                <article class="feature-card">
+                    <h3 class="feature-title">⚡ Side Effects</h3>
+                    <img src="pics/lebron-james-mocking.png" alt="Basketball player making a surprised expression" class="feature-image" loading="lazy">
+                    <div class="feature-content">
+                        <ul class="feature-list">
+                            <li>Instant regret incoming</li>
+                            <li>Screenshot taken (RIP)</li>
+                            <li>Awkward group chat silence</li>
+                            <li>"Bro why would you say that"</li>
                         </ul>
                     </div>
                 </article>
             </div>
         </section>
     </main>
+
+    <footer class="cotton-field-footer">
+        <div class="cotton-piece" style="left: 5%; animation-delay: 0s;"></div>
+        <div class="cotton-piece" style="left: 15%; animation-delay: 0.5s;"></div>
+        <div class="cotton-piece" style="left: 25%; animation-delay: 1s;"></div>
+        <div class="cotton-piece" style="left: 35%; animation-delay: 1.5s;"></div>
+        <div class="cotton-piece" style="left: 45%; animation-delay: 2s;"></div>
+        <div class="cotton-piece" style="left: 55%; animation-delay: 0.3s;"></div>
+        <div class="cotton-piece" style="left: 65%; animation-delay: 0.8s;"></div>
+        <div class="cotton-piece" style="left: 75%; animation-delay: 1.3s;"></div>
+        <div class="cotton-piece" style="left: 85%; animation-delay: 1.8s;"></div>
+        <div class="cotton-piece" style="left: 95%; animation-delay: 2.2s;"></div>
+        <div class="footer-text">Made with 👑 & Cotton Dreams</div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
