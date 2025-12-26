@@ -31,6 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (button.disabled) return;
             button.disabled = true;
             
+            // Play click sound
+            playSound('claimSound');
+            
             // Button animation
             button.style.transform = 'scale(0.95)';
             
@@ -43,6 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 if (message) {
                     message.classList.remove('hidden');
+
+                    // Play reveal sound
+                    playSound('revealSound');
 
                     // Set random fortune
                     const fortuneElement = document.getElementById('fortuneText');
@@ -198,7 +204,42 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
 });
+
+// Play sound effects
+function playSound(soundId) {
+    try {
+        const sound = document.getElementById(soundId);
+        if (sound) {
+            // Create a new audio context for better control
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            if (soundId === 'claimSound') {
+                // Whoosh effect: sweep from high to low
+                oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(100, audioContext.currentTime + 0.3);
+            } else if (soundId === 'revealSound') {
+                // Chime effect: quick sweep up
+                oscillator.frequency.setValueAtTime(200, audioContext.currentTime);
+                oscillator.frequency.exponentialRampToValueAtTime(800, audioContext.currentTime + 0.2);
+            }
+            
+            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+            
+            oscillator.start(audioContext.currentTime);
+            oscillator.stop(audioContext.currentTime + 0.3);
+        }
+    } catch (e) {
+        // Silently fail if audio context not supported
+    }
+}
 
 // Add keyboard support for accessibility
 document.addEventListener('DOMContentLoaded', function() {

@@ -273,8 +273,11 @@
 }
 
 .ticket-footer {
-    text-align: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
     margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .ticket-close-btn {
